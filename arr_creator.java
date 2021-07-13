@@ -7,9 +7,9 @@ public class arr_creator {
 	Random rand=new Random();
 	Viewer v1=new Viewer();
 	
-	//Вопрос
+	//Question to the user
 	public int Task(){
-		System.out.println("\nВведите количество элементов массива(не менее 10):");
+		System.out.println("\nEnter the number of array elements(at least 10):");
 		Scanner in=new Scanner(System.in);
 		try {
 		int a=in.nextInt();
@@ -18,17 +18,17 @@ public class arr_creator {
 		return a;
 		}
 		else{
-			System.out.println("Введено число меньшее 10");
+			System.out.println("A number less than 10 is entered");
 			return 0;
 			}
 		}
-		catch(Exception e) {System.out.print("Введено не целочисленное число, повторите ввод");
+		catch(Exception e) {System.out.print("A non-integer number was entered, repeat the input");
 			return 0;
 		}
 		
 	}
 	
-	//Создание массива
+	//Creating an array
 	public int[] Creator(int a) {
 		
 	int[] Arr=new int[a];
@@ -39,17 +39,17 @@ public class arr_creator {
 		return Arr;
 	}
 	
-	//Удаление случайного элемента
+	//Deleting a random element
 	public int[] Delete(int[] Arr,int a) {
 		
 		int[] arr2= new int[a-1];
 		int b=rand.nextInt(a);
 		if(b<a) {
-			for(int i=b;i<a-1;i++) {//смещение в массиве
+			for(int i=b;i<a-1;i++) {//offset in the array
 				Arr[i]=Arr[i+1];
 			
 			}
-			System.out.println("\n\nn-1 массив:\n");
+			System.out.println("\n\nn-1 array:\n");
 			for(int i=0;i<a-1;i++) {
 			
 				arr2[i]=Arr[i];
@@ -63,7 +63,7 @@ public class arr_creator {
 	
 	
 	
-	//Проверка элементов массива
+	//Checking array elements
 	public void Finder(int[] Arr,int[] arr_first,int a) {
 		boolean d;
 
@@ -81,7 +81,7 @@ public class arr_creator {
 			}
 			
 			if (d==false) {
-				System.out.println("\n"+"Потерянное число:"+(j+1));
+				System.out.println("\n"+"Lost number:"+(j+1));
 				break;
 			}			
 		}
@@ -102,7 +102,7 @@ public class arr_creator {
 			arr[j]=arr[k];
 			arr[k]=b;
 		}
-		System.out.println("\nПеремешанный n-1 массив:\n");
+		System.out.println("\nMixed n-1 array:\n");
 		v1.View(arr,a);
 		return arr;		
 	}
