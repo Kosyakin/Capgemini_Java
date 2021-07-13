@@ -6,11 +6,11 @@ import java.util.Random;
 public class arr_creator {
 	Random rand=new Random();
 	Viewer v1=new Viewer();
-	
+	Scanner in=new Scanner(System.in);
 	//Question to the user
 	public int Task(){
 		System.out.println("\nEnter the number of array elements(at least 10):");
-		Scanner in=new Scanner(System.in);
+		
 		try {
 		int a=in.nextInt();
 		
