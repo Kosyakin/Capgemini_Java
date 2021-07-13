@@ -1,7 +1,7 @@
 
 package prog;
 
-
+//Displaying Arrays
 public class Viewer {
 
 	public void View(int[] arr,int a) {
@@ -24,3 +24,4 @@ public class Viewer {
 		System.out.println("");	
 	}
 }
+
